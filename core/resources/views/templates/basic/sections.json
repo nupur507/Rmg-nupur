@@ -1,0 +1,327 @@
+{
+    "banner": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Banner Section",
+        "content": {
+            "images":{
+                "background_image":{
+                    "size": "770x610"
+                }
+            },
+            "heading": "text",
+            "subheading": "text",
+            "left_button": "text",
+            "left_button_link": "text",
+            "right_button": "text",
+            "right_button_link": "text"
+        }
+    },
+
+    "about": {
+        "builder": true,
+        "name": "About Us",
+        "content": {
+            "images":{
+                "background_image":{
+                    "size": "800x530"
+                }
+            },
+            "heading": "text",
+            "subheading": "text",
+            "video_link": "text",
+            "description": "textarea-nic",
+            "left_button": "text",
+            "left_button_link": "text",
+            "right_button": "text",
+            "right_button_link": "text"
+        },
+        "element": {
+            "icon": "icon",
+            "paragraph": "text",
+            "modal": true
+        }
+    },
+
+    "service": {
+        "builder": true,
+        "name": "Service",
+        "content": {
+            "heading": "text",
+            "subheading": "text",
+            "description": "text"
+        },
+        "element": {
+            "icon": "icon",
+            "title": "text",
+            "description": "textarea",
+            "modal": true
+        }
+    },
+
+
+    "how_it_works": {
+        "builder": true,
+        "name": "How It Works",
+        "content": {
+            "heading": "text",
+            "subheading": "text",
+            "description": "text"
+        },
+        "element": {
+            "icon": "icon",
+            "title": "text",
+            "modal": true
+        }
+    },
+
+    "subscribe": {
+        "builder": true,
+        "name": "Subscribe Section",
+        "content": {
+            "heading": "text",
+            "subheading": "text",
+            "description": "text"
+        }
+    },
+
+    "testimonial": {
+        "builder": true,
+        "name": "Testimonial Section",
+        "content": {
+            "heading": "text"
+        },
+        "element": {
+            "name": "text",
+            "rating": "text",
+            "say": "textarea",
+            "modal": true
+        }
+    },
+
+    "payment": {
+        "builder": true,
+        "name": "Payment Method",
+        "content": {
+            "heading": "text",
+            "subheading": "text",
+            "description": "text"
+        }
+    },
+
+    "mlm_plan": {
+        "builder": true,
+        "name": "Plan Section",
+        "content": {
+            "heading": "text",
+            "subheading": "text",
+            "description": "text"
+
+        }
+    },
+    "latest_trx": {
+        "builder": true,
+        "name": "Deposit And Withdraw",
+        "content": {
+            "heading": "text",
+            "subheading": "text",
+            "description": "text"
+        }
+    },
+
+    "top_earner": {
+        "builder": true,
+        "name": "Top Survey Earner",
+        "content": {
+            "heading": "text",
+            "subheading": "text",
+            "description": "text"
+        }
+    },
+
+    "counter": {
+        "builder": true,
+        "name": "Counter Section",
+        "content": {
+            "heading": "text",
+            "subheading": "text",
+            "description": "text"
+        },
+        "element": {
+            "title": "text",
+            "counter_digit": "text",
+            "icon": "icon",
+            "modal": true
+        }
+    },
+
+    "faq": {
+        "builder": true,
+        "name": "FAQ Section",
+        "content": {
+            "heading": "text",
+            "subheading": "text",
+            "description": "text"
+        },
+        "element": {
+            "question": "text",
+            "answer": "textarea",
+            "modal": false
+        }
+    },
+
+    "blog": {
+        "builder": true,
+        "name": "Blog Section",
+        "content": {
+            "heading": "text",
+            "subheading": "text",
+            "description": "text"
+        },
+        "element": {
+            "images":{
+                "blog_image":{
+                    "size": "700x450",
+                    "thumb": "210x135"
+                }
+            },
+            "title": "text",
+            "description": "textarea-nic",
+            "modal": false
+        }
+    },
+
+    "social_icon": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Social Icons",
+        "element": {
+            "title": "text",
+            "social_icon": "icon",
+            "url": "text",
+            "modal": true
+        }
+    },
+
+    "contact_us": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Contact Us",
+        "content": {
+            "title": "text",
+            "short_details": "text",
+            "email_address": "text",
+            "contact_details": "text",
+            "contact_number": "text"
+        }
+    },
+
+    "footer_section": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Footer Section",
+        "content": {
+            "website_footer": "text",
+            "copyright": "text"
+
+        }
+    },
+
+    "sign_in": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Sign In Page",
+        "content": {
+            "images":{
+                "background_image":{
+                    "size": "1920x1080"
+                }
+            }
+        }
+    },
+
+    "reset_password": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Reset Password Page",
+        "content": {
+            "images":{
+                "background_image":{
+                    "size": "1920x1080"
+                }
+            }
+        }
+    },
+
+    "sign_up": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Sign Up Page",
+        "content": {
+            "images":{
+                "background_image":{
+                    "size": "1920x1080"
+                }
+            }
+        }
+    },
+
+    "email_verify_page": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Email Verification Page",
+        "content": {
+            "images":{
+                "background_image":{
+                    "size": "1920x1080"
+                }
+            }
+        }
+    },
+
+    "sms_verify_page": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Sms Verification Page",
+        "content": {
+            "images":{
+                "background_image":{
+                    "size": "1920x1080"
+                }
+            }
+        }
+    },
+
+    "2fa_verify_page": {
+        "builder": true,
+        "no_selection": true,
+        "name": "2FA Verification Page",
+        "content": {
+            "images":{
+                "background_image":{
+                    "size": "1920x1080"
+                }
+            }
+        }
+    },
+
+    "policy_pages": {
+        "builder": true,
+        "no_selection":true,
+        "name": "Policy Pages",
+        "element": {
+            "title": "text",
+            "details": "textarea-nic",
+            "modal": false
+        }
+    },
+
+    "notice": {
+        "builder": true,
+        "no_selection": true,
+        "name": "User Survey Notice",
+        "content": {
+            "description": "textarea"
+        }
+    }
+}

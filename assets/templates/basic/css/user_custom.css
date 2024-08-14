@@ -1,0 +1,339 @@
+.custom-height .form-control {
+    height: 70px !important;
+    font-size: 50px !important;
+    line-height: 70px;
+    text-align: center;
+    font-weight: 700;
+}
+
+p.cron-p-style {
+    font-size: 30px;
+}
+
+.copyInput {
+    display: inline-block;
+    line-height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+.copied::after {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 100px;
+    display: block;
+    content: "COPIED";
+    font-size: 1em;
+    padding: 2px 5px;
+    color: #fff;
+    background-color: #22a;
+    border-radius: 3px;
+    opacity: 0;
+    will-change: opacity, transform;
+    animation: showcopied 1.5s ease;
+}
+
+
+
+nav ul.pagination {
+    justify-content: flex-end;
+}
+
+@keyframes showcopied {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    50% {
+        opacity: 0.7;
+        transform: translateX(40%);
+    }
+    70% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.alert.block-none{
+    display: block !important;
+
+}
+
+.w-h-100-p{
+    width: 100%; height: 100%;
+}
+
+.card-img-top.depo
+{
+    width: 100%; min-height: 213px;
+}
+
+
+.max-w-h-100px
+{
+    max-width:100px;
+    max-height:100px;
+    margin:0 auto;
+}
+
+.max-w-h-100px
+{
+    max-width:100px;
+    max-height:100px;
+    margin:0 auto;
+}
+
+.font-15
+{
+    font-size: 15px;
+}
+.m-w-220px
+{
+    max-width: 220px;
+}
+.package-features-list span.icon i {
+    font-size: 20px;
+}
+.package-features-list {
+    display: block;
+    text-align: center;
+}
+.package-features-list li {
+    font-size: inherit !important;
+    position: relative;
+}
+
+.package-features-list li {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.package-features-list span.icon i  {
+    color: #1e90ff;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+@media only screen and (min-device-width: 767px) and (max-device-width: 1440px) {
+    .package-features-list li i {
+        font-size: 7px;
+        width: 13px;
+        height: 13px;
+    }
+    .package-features-list span.icon i {
+        top: 3px;
+        right: -10px;
+        font-size: 15px;
+    }
+    .package-features-list li, span
+    {
+        font-size: 13px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 359px) {
+    .package-features-list li i {
+        font-size: 7px;
+        width: 13px;
+        height: 13px;
+    }
+    .package-features-list span.icon i {
+        top: 3px;
+        right: -10px;
+        font-size: 15px;
+    }
+    .package-features-list li, span
+    {
+        font-size: 13px;
+    }
+}
+
+
+
+
+* New Added Css */
+.card-deposit .card-header {
+    background-color: #7367f0;
+    color: #fff;
+}
+.card-deposit .card-body {
+    text-align: center;
+}
+.card-deposit .card-footer {
+    padding: 20px;
+}
+.card-deposit .card-body img {
+    max-width: 220px;
+    max-height: 220px;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.deposit-preview-content {
+    width: calc(100% - 180px);
+    padding-left: 25px;
+}
+
+.deposit-preview {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.deposit-preview .deposit-thumb {
+    width: 320px;
+}
+@media (max-width: 1399px) {
+    .deposit-preview .deposit-thumb {
+        width: 300px;
+    }
+    .deposit-preview .deposit-content {
+        width: calc(100% - 300px);
+    }
+}
+
+.deposit-preview .deposit-thumb img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.deposit-preview .deposit-content {
+    width: calc(100% - 320px);
+    border-left: none;
+    -webkit-border-radius: 0 5px 5px 0;
+    -moz-border-radius: 0 5px 5px 0;
+    border-radius: 0 5px 5px 0;
+    padding-left: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+@media (max-width: 1199px) {
+    .deposit-preview .deposit-content {
+        padding-left: 20px;
+    }
+
+    .deposit-preview .deposit-content ul li {
+        font-size: 14px !important;
+    }
+
+    .deposit-preview {
+        padding: 30px 20px;
+    }
+}
+
+.deposit-preview .deposit-content ul {
+    width: 100%;
+    text-align: center;
+}
+
+ .deposit-content ul li {
+    padding: 10px 0;
+    font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.deposit-content ul li:not(:last-child) {
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 991px) {
+    .deposit-preview .deposit-content,
+    .deposit-preview .deposit-thumb {
+        width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .deposit-preview {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 400px;
+        padding: 20px;
+    }
+
+    .deposit-preview .deposit-thumb {
+        width: 100%;
+    }
+
+    .deposit-preview .deposit-content {
+        padding-left: 0;
+        padding-top: 20px;
+        width: 100%;
+        -webkit-border-radius: 0 0 5px 5px;
+        -moz-border-radius: 0 0 5px 5px;
+        border-radius: 0 0 5px 5px;
+    }
+}
+
+@media (max-width: 450px) {
+    .deposit-preview {
+        padding: 15px;
+    }
+
+    .deposit-preview .deposit-content li {
+        font-size: 14px !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .col-xxl-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+@media (max-width: 767px) {
+    .method-card .deposit-content li {
+        font-size: 14px !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .col-xxl-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .col-xxl-4 {
+        flex: 0 0 calc(100% / 3);
+        max-width:  calc(100% / 3);
+    }
+    .col-xxl-6 {
+        flex: 0 0 calc(100% / 2);
+        max-width:  calc(100% / 2);
+    }
+}
+
+.survey-list-item {
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    padding: 20px;
+}
