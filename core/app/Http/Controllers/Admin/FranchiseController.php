@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
+use App\Models\Deposit;
+use App\Models\Gateway;
 use App\Http\Controllers\Controller;
 use App\Models\Franchise;
 use App\Models\FranchiseOrder;
@@ -350,6 +351,50 @@ class FranchiseController extends Controller
             return redirect()->back()->withNotify($notify);
 
         }
+    }
+    public function deposits(Request $request, $id)
+    {
+        $user =  Franchise::findOrFail($id);
+        $userId = $user->id;
+        if ($request->search) {
+            $search = $request->search;
+            $page_title = 'Search User Deposits : ' . $user->username;
+            $deposits = $user->deposits()->where('trx', $search)->latest()->paginate(getPaginate());
+            $empty_message = 'No deposits';
+            return view('admin.deposit.log', compact('page_title', 'search', 'user', 'deposits', 'empty_message','userId'));
+        }
+
+        $page_title = 'User Deposit : ' . $user->username;
+        $deposits = $user->deposits()->latest()->paginate(getPaginate());
+        $empty_message = 'No deposits';
+        $scope = 'all';
+        return view('admin.deposit.log', compact('page_title', 'user', 'deposits', 'empty_message','userId','scope'));
+    }
+
+
+    public function depViaMethod($method,$type = null,$userId){
+        $method = Gateway::where('alias',$method)->firstOrFail();
+        $user =  Franchise::findOrFail($userId);
+        if ($type == 'approved') {
+            $page_title = 'Approved Payment Via '.$method->name;
+            $deposits = Deposit::where('method_code','>=',1000)->where('user_id',$user->id)->where('method_code',$method->code)->where('status', 1)->latest()->with(['user', 'gateway'])->paginate(getPaginate());
+        }elseif($type == 'rejected'){
+            $page_title = 'Rejected Payment Via '.$method->name;
+            $deposits = Deposit::where('method_code','>=',1000)->where('user_id',$user->id)->where('method_code',$method->code)->where('status', 3)->latest()->with(['user', 'gateway'])->paginate(getPaginate());
+        }elseif($type == 'successful'){
+            $page_title = 'Successful Payment Via '.$method->name;
+            $deposits = Deposit::where('status', 1)->where('user_id',$user->id)->where('method_code',$method->code)->latest()->with(['user', 'gateway'])->paginate(getPaginate());
+        }elseif($type == 'pending'){
+            $page_title = 'Pending Payment Via '.$method->name;
+            $deposits = Deposit::where('method_code','>=',1000)->where('user_id',$user->id)->where('method_code',$method->code)->where('status', 2)->latest()->with(['user', 'gateway'])->paginate(getPaginate());
+        }else{
+            $page_title = 'Payment Via '.$method->name;
+            $deposits = Deposit::where('status','!=',0)->where('user_id',$user->id)->where('method_code',$method->code)->latest()->with(['user', 'gateway'])->paginate(getPaginate());
+        }
+        $page_title = 'Deposit History: '.$user->username.' Via '.$method->name;
+        $methodAlias = $method->alias;
+        $empty_message = 'Deposit Log';
+        return view('admin.deposit.log', compact('page_title', 'empty_message', 'deposits','methodAlias','userId'));
     }
 
 

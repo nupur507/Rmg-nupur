@@ -774,6 +774,8 @@ function gatewayRedirectUrl(){
     return 'user.deposit';
 }
 
+
+
 function paginateLinks($data, $design = 'admin.partials.paginate'){
     return $data->appends(request()->all())->links($design);
 }
@@ -942,12 +944,12 @@ function updateDirectCount($id)
 {
 
         if (isUserExists($id)) {
-          
+
             $extra = UserExtra::where('user_id', $id)->first();
            $extra->paid_direct += 1;
             $extra->save();
-        } 
-    
+        }
+
 
 }
 

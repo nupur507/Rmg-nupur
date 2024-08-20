@@ -45,9 +45,15 @@
                         </ul>
                     </div>
                 </li>
-
-
+                <li class="sidebar-menu-item {{ menuActive('franchise.deposits') }}">
+                    <a href="{{ route('franchise.deposits') }}" class="nav-link">
+                        <i class=" menu-icon las la-credit-card"></i>
+                        <span class="menu-title">@lang('Deposit Now')</span>
+                    </a>
+                </li>
             </ul>
+
+
             <div class="text-center mb-3 text-uppercase">
                 <span class="text--primary">{{systemDetails()['name']}}</span>
                 <span class="text--success">@lang('V'){{systemDetails()['version']}} </span>

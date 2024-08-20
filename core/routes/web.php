@@ -137,7 +137,9 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
         Route::post('users/send-email', 'ManageUsersController@sendEmailAll')->name('users.email.send');
 
         Route::get('user/completed/survey/{id}', 'ManageUsersController@survey')->name('users.survey');
-
+        //FRanchise
+        Route::get('franchise/deposits/{id}', 'FranchiseController@deposits')->name('franchise.deposits');
+        Route::get('franchise/deposits/via/{method}/{type?}/{userId}', 'FranchiseController@depViaMethod')->name('franchise.deposits.method');
         // mlm plan
         Route::get('plans', 'MlmController@plan')->name('plan');
         Route::post('plan/store', 'MlmController@planStore')->name('plan.store');
@@ -291,12 +293,12 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
         Route::get('setting/logo-icon', 'GeneralSettingController@logoIcon')->name('setting.logo_icon');
         Route::post('setting/logo-icon', 'GeneralSettingController@logoIconUpdate')->name('setting.logo_icon');
 
-        
+
         // Autopool
         Route::get('setting/autopool', 'GeneralSettingController@autopool')->name('setting.autopool');
         Route::post('setting/autopool', 'GeneralSettingController@autopoolUpdate')->name('setting.autopool');
 
-        
+
         // Reward
         Route::get('setting/reward', 'GeneralSettingController@reward')->name('setting.reward');
         Route::post('setting/reward', 'GeneralSettingController@rewardUpdate')->name('setting.reward');
@@ -403,6 +405,16 @@ Route::namespace('Franchise')->prefix('franchise')->name('franchise.')->group(fu
 
 
     });
+    // Deposit
+    Route::any('deposit', 'Gateway\PaymentController@deposit')->name('franchise.deposit');
+    Route::post('deposit/insert', 'Gateway\PaymentController@depositInsert')->name('franchise.deposit.insert');
+    Route::get('deposit/preview', 'Gateway\PaymentController@depositPreview')->name('franchise.deposit.preview');
+    Route::get('deposit/confirm', 'Gateway\PaymentController@depositConfirm')->name('franchise.deposit.confirm');
+    Route::get('deposit/manual', 'Gateway\PaymentController@manualDepositConfirm')->name('franchise.deposit.manual.confirm');
+    Route::post('deposit/manual', 'Gateway\PaymentController@manualDepositUpdate')->name('franchise.deposit.manual.update');
+    Route::get('deposit/history', 'FranchiseController@depositHistory')->name('franchise.deposit.history');
+
+
 
 });
 

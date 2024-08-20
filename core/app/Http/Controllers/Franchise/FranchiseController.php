@@ -9,6 +9,7 @@ use App\Models\FranchiseOrderProduct;
 use App\Models\Product;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Models\Deposit;
 use Illuminate\Support\Facades\Validator;
 
 
@@ -201,6 +202,13 @@ class FranchiseController extends Controller
 
         return response()->json($response);
 
+    }
+    public function depositHistory()
+    {
+        $page_title = 'Deposit History';
+        $empty_message = 'No history found.';
+        $logs = auth()->user()->deposits()->with(['gateway'])->latest()->paginate(getPaginate());
+        return view($this->activeTemplate . 'franchise.deposit_history', compact('page_title', 'empty_message', 'logs'));
     }
 
 }
